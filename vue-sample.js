@@ -1,6 +1,11 @@
 new Vue({
     el: '#app',
     data: {
-        name: 'Enrique'
+        message: 'Hello World'
+    },
+    methods: {
+        changeMessage: function() {
+            this.message = 'Hi';
+        }
     }
 });

@@ -17,7 +17,13 @@
         <![endif]-->
 
         <div id="app">
-            {{ name }}
+            <p>
+                {{ message }}
+            </p>
+
+            <button v-on:click="changeMessage">Change Message</button>
+            
+            
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
