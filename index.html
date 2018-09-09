@@ -20,6 +20,7 @@
             <p>
                 {{ message }}
             </p>
+            <p v-if="messageUpdated">Message updated!</p>
 
             <button v-on:click="changeMessage">Change Message</button>
             
