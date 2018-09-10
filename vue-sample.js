@@ -1,9 +1,12 @@
 
 // Defining a Vue component
 Vue.component('app-username', {
+    props: [
+        'username'
+    ],
     data: function() {
         return {
-            username: 'Juan Perez'
+            // username: 'Juan Perez'
         }
     }, 
     template: '<p>{{ username }}</p>'
