@@ -1,3 +1,16 @@
+
+// Defining a Vue component
+Vue.component('app-username', {
+    data: function() {
+        return {
+            username: 'Juan Perez'
+        }
+    }, 
+    template: '<p>{{ username }}</p>'
+}); // static method
+
+
+
 new Vue({
     el: '#app',
     data: {
