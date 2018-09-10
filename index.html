@@ -16,6 +16,11 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- 
+            v-bind  To bind to HTML attributes and properties
+            v-on    To bind to events
+        -->
+
         <div id="app">
             <p v-bind:class="{ updated: messageUpdated }">{{ message }}</p>
             <p v-if="messageUpdated">Message updated!</p>
@@ -30,6 +35,15 @@
                     v-bind:id="'el' + element"
                     v-bind:style="{ backgroundColor: getColor(element) }">Element {{ element }}</li>
             </ul>
+
+        </div>
+
+        <hr>
+
+
+        <div id="app2">
+            <p>Second view instance</p>
+            <p>{{ message }}</p>
 
         </div>
         
