@@ -9,7 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./vue-sample.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -17,7 +17,7 @@
         <![endif]-->
 
         <div id="app">
-            <p>{{ message }}</p>
+            <p v-bind:class="{ updated: messageUpdated }">{{ message }}</p>
             <p v-if="messageUpdated">Message updated!</p>
             <button v-on:click="changeMessage">Change Message</button>
 
