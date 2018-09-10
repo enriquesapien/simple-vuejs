@@ -4,16 +4,23 @@ Vue.component('app-username', {
     props: [
         'username'
     ],
+    template: '<p v-on:click="usernameClicked">{{ username }}</p>', 
     data: function() {
         return {
             // username: 'Juan Perez'
         }
     }, 
-    template: '<p>{{ username }}</p>'
+    methods: {
+        usernameClicked() { // ES6 sintax
+            // custom event definition
+            // Vue provided methods begin with $
+            this.$emit('user-clicked', this.username);
+        }
+    }
 }); // static method
 
 
-
+// Vue instance
 new Vue({
     el: '#app',
     data: {
@@ -31,6 +38,9 @@ new Vue({
         },
         getColor: function(number) {
             return number % 2 == 0 ? 'green' : 'red';
+        },
+        userWasClicked: function(name) {
+            alert(name);
         }
     }
 });

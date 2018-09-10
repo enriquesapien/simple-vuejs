@@ -24,7 +24,10 @@
         <div id="app">
 
             <!-- Vue defined component -->
-            <app-username v-bind:username="'Juan'"></app-username>
+            <app-username 
+                v-on:user-clicked="userWasClicked($event)" 
+                v-bind:username="'Juan'">
+            </app-username>
             <app-username v-bind:username="'Pepe'"></app-username>
 
             <hr>
